@@ -4,11 +4,11 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Comment extends Model
+class Tag extends Model
 {
-   protected $table = 'comments';
+    protected $table = 'tags';
     
-    protected $primaryKey = 'commentID';
+    protected $primaryKey = 'tagID';
     
     public $timestamps = false;
 }
