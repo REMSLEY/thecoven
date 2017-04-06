@@ -281,3 +281,17 @@ UNLOCK TABLES;
 
 -- Dump completed on 2017-04-02 18:45:53
 
+***set up apache server to point to the laravel application***
+1. go to xampp server and open the config file - Apache httpd-xampp.conf file
+2. add the following to the bottom:
+    <VirtualHost *:80>
+  ServerName theyellowrose.com
+  DocumentRoot "C:/xampp/htdocs/thecoven/public"
+  <Directory "C:/xampp/htdocs/thecoven/public">
+    AllowOverride all
+  </Directory>
+</VirtualHost>
+3. navigate to hosts file C:/windows/system32/drivers/etc. Open file with admin rights.
+4. add the following to the hosts file:
+ 127.0.0.1 theyellowrose.com
+5. save
