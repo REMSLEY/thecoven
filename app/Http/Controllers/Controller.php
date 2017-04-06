@@ -13,6 +13,6 @@ class Controller extends BaseController
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 public function displayPosts (){
 $posts = Post::all();
-dd($posts);//laravel version of vardump
+//dd($posts);//laravel version of vardump
 }
 }
