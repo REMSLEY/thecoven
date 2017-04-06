@@ -8,11 +8,8 @@ use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use App\Post;
 
-class Controller extends BaseController
+ abstract class Controller extends BaseController
 {
-    use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
-public function displayPosts (){
-$posts = Post::all();
-//dd($posts);//laravel version of vardump
-}
+     public function add();
+ 
 }
