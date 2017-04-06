@@ -11,5 +11,6 @@ use App\Post;
  abstract class Controller extends BaseController
 {
      public function add();
+     
  
 }
