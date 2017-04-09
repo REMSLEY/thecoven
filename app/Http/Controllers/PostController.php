@@ -7,7 +7,7 @@ use App\Http\Controllers\Controller;
 
 class PostController extends Controller
 {
-    use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
+    //use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
     
     /**
      * Display a listing of the resource.
