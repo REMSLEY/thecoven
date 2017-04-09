@@ -1,19 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        @include('partials._head')
+        Create New Post
     </head>
     
     <body>
-        @include('partials._nav')
         
-        <div class="container"> 
-          @yield('content')
-          @include('partials._footer')
-        </div> <!-- end of the .container / partial is the name of something that get reused a lot-->  
+   <div class="row">
+    <div class="col-md-8 col-md-offset-2">     
+        <h1>Create New Post</h1>
+        <hr>
         
-          @include('partials._javascript') 
-          @yield('scripts')
-          
+                
+</div>
+</div>
     </body>
 </html>   
+
+<!--@extends('main')
+@section('title', '|Create New Post')
+
+@section('content')
+@endsection-->
+
+
