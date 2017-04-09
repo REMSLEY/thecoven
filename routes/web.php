@@ -22,6 +22,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/hello', 'Controller@displayPosts');
+Route::get('/hello', 'PostController@displayPosts');
+
+Route::get('/pooo', 'DemoController@test');
 
 
