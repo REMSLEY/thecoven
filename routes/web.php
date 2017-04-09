@@ -10,16 +10,16 @@
 | contains the "web" middleware group. Now create something great!
 |
  */
-Route::get('links', function () {
-    return view('links');
+Route::get('pages/links', function () {
+    return view('pages/links');
 });
 
-Route::get('about', function () {
-    return view('about');
+Route::get('pages/about', function () {
+    return view('pages/about');
 });
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('pages/welcome', function () {
+    return view('pages/welcome');
 });
 
 //Route::get('/hello', 'PostController@displayPosts');
