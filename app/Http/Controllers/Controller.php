@@ -6,7 +6,7 @@ use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
-use App\Post;
+//use App\Post;
 
  abstract class Controller extends BaseController
 {
@@ -15,20 +15,16 @@ use App\Post;
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-        //
-    }
+    abstract public function index();
+    
 
     /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
-        //
-    }
+    abstract public function create();
+    
 
     /**
      * Store a newly created resource in storage.
@@ -36,10 +32,8 @@ use App\Post;
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
-    {
-        //
-    }
+    abstract public function store(Request $request);
+    
 
     /**
      * Display the specified resource.
@@ -47,21 +41,16 @@ use App\Post;
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
-    {
-        //
-    }
-
+    abstract public function show($id);
+    
     /**
      * Show the form for editing the specified resource.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
-    {
-        //
-    }
+    abstract public function edit($id);
+   
 
     /**
      * Update the specified resource in storage.
@@ -70,10 +59,8 @@ use App\Post;
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
-    {
-        //
-    }
+    abstract public function update(Request $request, $id);
+   
 
     /**
      * Remove the specified resource from storage.
@@ -81,10 +68,8 @@ use App\Post;
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
-    {
-        //
-    }
+    abstract public function destroy($id);
+  
     
  
 }
