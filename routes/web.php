@@ -22,8 +22,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/hello', 'PostController@displayPosts');
+//Route::get('/hello', 'PostController@displayPosts');
 
-Route::get('/pooo', 'DemoController@test');
+Route::resource('posts', 'PostController');
+Route::resource('comments', 'CommentController');
+Route::resource('tags', 'TagController');
+Route::resource('users', 'UserController');
 
 

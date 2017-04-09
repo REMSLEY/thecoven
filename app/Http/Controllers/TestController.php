@@ -8,7 +8,7 @@ use App\Http\Controllers\Controller;
 class TestController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Display a listing of the post.
      *
      * @return \Illuminate\Http\Response
      */
@@ -18,13 +18,13 @@ class TestController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
+     * Show the form for creating a new post.
      *
      * @return \Illuminate\Http\Response
      */
     public function create()
     {
-        //
+        //post request
     }
 
     /**
@@ -35,7 +35,7 @@ class TestController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //post request
     }
 
     /**
@@ -69,7 +69,7 @@ class TestController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        //patch
     }
 
     /**
