@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePostsTable extends Migration
+class CreateAccessLevelTypesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,9 @@ class CreatePostsTable extends Migration
      */
     public function up()
     {
-        Schema::create('posts', function (Blueprint $table) {
+        Schema::create('access_level_types', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('user_id',6);
-            $table->string('title', 255);
-            $table->mediumText('body');  
-            $table->timestamps();
-            $table->dateTime('end_date');
-            $table->integer('update_id',6);
+            $table->string('access_level_type',30);
         });
     }
 
@@ -31,6 +26,6 @@ class CreatePostsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('posts');
+        Schema::dropIfExists('access_level_types');
     }
 }
