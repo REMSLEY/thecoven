@@ -9,9 +9,6 @@ nbdist/
 .nb-gradle/
 
 # End of https://www.gitignore.io/api/netbeans
-<<<<<<< HEAD
-/vendor/
-=======
 
 # Created by https://www.gitignore.io/api/laravel
 
