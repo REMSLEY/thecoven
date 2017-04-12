@@ -15,7 +15,7 @@ class CreatePostStatesTable extends Migration
     {
         Schema::create('post_states', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('post_id', 6);
+            $table->integer('post_id')->length(6);
             $table->string('state', 30);
             
         });

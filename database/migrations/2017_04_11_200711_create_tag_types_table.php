@@ -17,7 +17,7 @@ class CreateTagTypesTable extends Migration
             $table->increments('id');
             $table->string('tag',30);
             $table->dateTime('end_date');
-            $table->integer('update_id', 6);
+            $table->integer('update_id')->length(6);
             $table->timestamps();
         });
     }

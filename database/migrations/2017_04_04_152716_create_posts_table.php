@@ -15,12 +15,12 @@ class CreatePostsTable extends Migration
     {
         Schema::create('posts', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('user_id',6);
+            $table->integer('user_id')->length(6);
             $table->string('title', 255);
             $table->mediumText('body');  
             $table->timestamps();
             $table->dateTime('end_date');
-            $table->integer('update_id',6);
+            $table->integer('update_id')->length(6);
         });
     }
 
