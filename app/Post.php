@@ -4,11 +4,9 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
+
 class Post extends Model
 {
     protected $table = 'posts';
-    
-    protected $primaryKey = 'postID';
-    
-    public $timestamps = false;
+  
 }

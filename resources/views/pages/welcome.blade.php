@@ -20,14 +20,15 @@
    </div>
     
 <hr>
-    
+    @foreach($posts as $post)
    <div class="post"</div>
-       <h3> Post Title </h3>
-       <p> Post Intro </p>
+       <h3> {{$post->title}} </h3>
+       <p> {{substr($post->body,0,20)}}... </p>
        <a href='#' class='btn btn primary'> Read More </a>
    </div>
 
 <hr>
+    @endforeach
 
     <div class="post"</div>
        <h3> Post Title </h3>
