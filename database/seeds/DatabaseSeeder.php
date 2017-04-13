@@ -9,8 +9,16 @@ class DatabaseSeeder extends Seeder
      *
      * @return void
      */
-    public function run()
+     public function run()
     {
-        // $this->call(UsersTableSeeder::class);
+        DB::table('posts')->insert([
+            'user_id' => rand(1,10),
+            'title' => str_random(30),
+            'body'=> str_random(300),
+            'created_at'=> new DateTime(),
+            'updated_at'=> new DateTime(),
+            'end_date'=> new DateTime(),
+            'update_id'=>rand(1,10)
+            
     }
 }
