@@ -11,10 +11,37 @@
 
 <div class="row">
    <div class="col-md-8">
-       <h2>MAIN TEXT</h2>
+       <div class="post"</div>
+       <h3> Post Title </h3>
+       <p> Post Intro </p>
+       <a href='#' class='btn btn primary'> Read More </a>
+   </div>
+    
+<hr>
+    
+   <div class="post"</div>
+       <h3> Post Title </h3>
+       <p> Post Intro </p>
+       <a href='#' class='btn btn primary'> Read More </a>
+   </div>
+
+<hr>
+
+    <div class="post"</div>
+       <h3> Post Title </h3>
+       <p> Post Intro </p>
+       <a href='#' class='btn btn primary'> Read More </a>
+   </div>
+
+<hr>
+
+    <div class="post"</div>
+       <h3> Post Title </h3>
+       <p> Post Intro </p>
+       <a href='#' class='btn btn primary'> Read More </a>
    </div>
     
         <div class="col-md-3-offset-1">
-            <h2>SIDEBAR</h2>
+            <h2>SIDEBAR</h2> <!-- this does not work atm -->
         </div>
    @endsection
