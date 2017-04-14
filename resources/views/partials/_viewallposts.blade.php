@@ -1,3 +1,5 @@
+
+<?php use app\Post; ?>
 <div class='row'>
     <div class='col-md-10'>
         <h1>All Posts</h1>
@@ -19,6 +21,7 @@
                 </thead>
                 
                 <tbody>
+                    {{ $posts = Post::all()}}
                     @foreach($posts as $post)
                         <tr>
                             <th><h1>{{ $post->title }}</h1></th>

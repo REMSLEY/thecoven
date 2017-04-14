@@ -20,7 +20,8 @@
    </div>
     
 <hr>
-    @foreach($posts as $post)
+@include('partials._viewallposts')
+<!--    @foreach($posts as $post)
    <div class="post"</div>
        <h3> {{$post->title}} </h3>
        <p> {{substr($post->body,0,20)}}... </p>
@@ -28,7 +29,7 @@
    </div>
 
 <hr>
-    @endforeach
+    @endforeach-->
 
     <div class="post"</div>
        <h3> Post Title </h3>

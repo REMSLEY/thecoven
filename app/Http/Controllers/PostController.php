@@ -18,12 +18,19 @@ class PostController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+//    public function index()
+//    {
+//        $posts = Post::all();
+//        return view('pages.welcome', ['posts' => $posts]);
+//    }
+ 
+    // to display posts for a signed in user.
+    public function index ()
     {
         $posts = Post::all();
         return view('pages.welcome')->withPosts($posts);
-    }
 
+    }
     /**
      * Show the form for creating a new resource.
      *
