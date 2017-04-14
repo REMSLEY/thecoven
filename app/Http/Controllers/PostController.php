@@ -94,7 +94,25 @@ class PostController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+           //validate the data
+        $this->validate($request, ['title'=> 'required|max:255',
+                                   'body' => 'required'
+            ]);
+        
+       //store the data
+//        $post = new Post;
+//        
+//        $post->title = $request->title;
+//        $post->body = $request->body;
+//        $post->user_id = 1;
+//        $post->end_date = null;
+//        $post->update_id = null;
+        
+        $post->save();
+        
+        return redirect()->route('posts.show', $post->id);
+        
+        //redirect to a page, e.g. display the post //
     }
 
     /**
