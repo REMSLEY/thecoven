@@ -4,11 +4,13 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+//use Illuminate\Foundation\Validation;
 use App\Post;
 
 class PostController extends Controller
 {
-    //use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
+    //use ValidatesRequests;
+    //use AuthorizesRequests, DispatchesJob;
     
     /**
      * Display a listing of the resource.
@@ -39,7 +41,25 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //validate the data
+        $this->validate($request, ['title'=> 'required|max:255',
+                                   'body' => 'required'
+            ]);
+        
+       //store the data
+        $post = new Post;
+        
+        $post->title = $request->title;
+        $post->body = $request->body;
+        $post->user_id = 1;
+        $post->end_date = null;
+        $post->update_id = null;
+        
+        $post->save();
+        
+        return redirect()->route('posts.show', $post->id);
+        
+        //redirect to a page, e.g. display the post
     }
 
     /**

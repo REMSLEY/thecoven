@@ -19,8 +19,8 @@ class CreatePostsTable extends Migration
             $table->string('title', 255);
             $table->mediumText('body');  
             $table->timestamps();
-            $table->dateTime('end_date');
-            $table->integer('update_id')->length(6);
+            $table->dateTime('end_date')->nullable();
+            $table->integer('update_id')->length(6)->nullable();
         });
     }
 
