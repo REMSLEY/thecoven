@@ -22,9 +22,9 @@ Route::get('pages/about', function () {
     return view('pages/about');
 });
 
-Route::get('','PostController@index');
+//Route::get('','PostController@index');
 
-Route::get('pages/welcome', function () {
+Route::get('', function () {
     return view('pages/welcome');
 });
 
