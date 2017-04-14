@@ -24,17 +24,18 @@
                 <div class="row">
                     <div class="col-sm-6">
                         <a href="{{ redirect()->route('posts.edit', $post->id) }}" class="btn btn-block btn-primary">Edit Post</a> 
-
-
                     </div>
                     <div class="col-sm-6">
-                        <a href="{{ redirect()->route('posts.destroy', $post->id) }}" class="btn btn-block btn-danger">Delete Post</a>
 
+                        <form action="{{route('posts.destroy', $post->id)}}" method="post">
+                            <input name="_method" type="hidden" value="DELETE">
+    <!--                    <a href="{{ redirect()->route('posts.destroy', $post->id) }}" class="btn btn-block btn-danger">Delete Post</a>-->
+                        <input type="submit" value="Delete" class="btn btn-block btn-danger">
+                       {{ csrf_field() }}
+                        </form>
                     </div>
                 </div>
-
             </div>
         </div>
-    </div>
-
+    </div>    
 @endsection

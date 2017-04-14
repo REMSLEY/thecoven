@@ -57,7 +57,7 @@ class PostController extends Controller
        //store the data
         $post = new Post;
         
-        $post->title = $request->title;
+        $post->title = $request->title; // Slightly different syntax in the update function below - why?
         $post->body = $request->body;
         $post->user_id = 1;
         $post->end_date = null;
@@ -136,7 +136,12 @@ class PostController extends Controller
      */
     public function destroy($id)
     {
-        //
+       $post = Post::find($id);
+       $post->delete();
+       
+       Session::flash('success', 'Your post has been deleted');
+       
+       return redirect()->route('posts.index');
     }
 //public function displayPosts (){
 //$posts = Post::all();
