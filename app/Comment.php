@@ -7,8 +7,5 @@ use Illuminate\Database\Eloquent\Model;
 class Comment extends Model
 {
    protected $table = 'comments';
-    
-    protected $primaryKey = 'commentID';
-    
-    public $timestamps = false;
+
 }
