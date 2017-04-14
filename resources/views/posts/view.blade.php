@@ -23,10 +23,13 @@
 
             <div class="row">
                 <div class="col-sm-6">
-                    {!! Html::linkRoute('posts.edit', 'Edit Post', [$post->id], ['class' => 'btn btn-primary btn-block']) !!}
+                    <a href="{{ redirect()->route('posts.edit', $post->id) }}" class="btn btn-block btn-primary">Edit Post</a> 
+                       
+
                 </div>
                 <div class="col-sm-6">
-                    {!! Html::linkRoute('posts.destroy', 'Delete Post', [$post->id], ['class' => 'btn btn-danger btn-block']) !!}
+                    <a href="{{ redirect()->route('posts.destroy', $post->id) }}" class="btn btn-block btn-danger">Delete Post</a>
+
                 </div>
             </div>
             
