@@ -1,0 +1,15 @@
+@if(Session::has('success'))
+<div class="alert alert-success" role="alert"></div>
+<strong>Success:</strong> {{Session::get('success')}}
+@endif
+
+@if (count($errors) > 0)
+<div class="alert alert-danger" role="alert">
+    <strong>Errors:</strong>
+  <ul>
+    @foreach ($errors->all() as $error)
+    <li>{{$error}}</li>
+  </ul>
+    @endforeach
+</div>
+@endif
