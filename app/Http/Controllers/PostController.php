@@ -65,7 +65,7 @@ class PostController extends Controller
         
         $post->save();
         
-        Session::flash('success', 'Thank you for your contribution');
+        Session::flash('success', 'Your post has been published');
                 
         return redirect()->route('posts.show', $post->id);
         
@@ -134,7 +134,12 @@ class PostController extends Controller
      */
     public function destroy($id)
     {
-        //
+       $post = Post::find($id);
+       $post->delete();
+       
+       Session::flash('success', 'Your post has been deleted');
+       
+       return redirect()->route('posts.index');
     }
 //public function displayPosts (){
 //$posts = Post::all();
