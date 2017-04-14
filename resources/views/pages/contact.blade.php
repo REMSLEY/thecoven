@@ -1,5 +1,5 @@
 @extends('main')
-@section('pageTitle', '| Links')
+@section('pageTitle', '| Contact')
 @section('content')
 
 <head>

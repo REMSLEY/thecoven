@@ -35,7 +35,7 @@
                     <h1> About Us </h1>
                 </div>
             </div>
-        </div> OPTION TO USE THIS INSTEAD -->  
+        </div> OPTION TO USE THIS INSTEAD FOR THE TITLE OF ABOUT -->  
         
     </body>
 </html>

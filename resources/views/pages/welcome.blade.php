@@ -5,22 +5,33 @@
     <div class="row">
         <div class="col-md-12">
            <div class="jumbotron">
+             <div style="background-color:rgb(0,0,0);background-image:url(http://www.zingerbugimages.com/backgrounds/yellow_mini_flowers.gif);background-position:top left;background-repeat:repeat;background-attachment:fixed;}" class= "jumbotron">
            <h1>Welcome to the Yellow Rose</h1>
            <p class="lead">A space to post stuff. We can edit this part to briefly describe/ introduce the site - click to see popular post? Get logo in here?</p>
-  <p><a class="btn btn-primary btn-lg" href="#" role="button">Top Post</a></p>
-</div> 
-</div> <!-- end of header .row (the header element)-->
+  <p><a class="btn btn-primary btn-lg" href="#" role="button">Latest Post</a></p>
+             </div> 
+           </div>
+        </div>
+    </div> <!-- end of header .row (the header element)-->
+    
+    
+    Want to show the featured post here.
+    
 
+    <!-- SHOWS MULTIPLE POSTS AND A SIDEBAR THAT IS NOT WORKING 
 <div class="row">
    <div class="col-md-8">
        <div class="post"</div>
        <h3> Post Title </h3>
        <p> Post Intro </p>
        <a href='#' class='btn btn primary'> Read More </a>
+   
    </div>
+</div>
     
 <hr>
     @foreach($posts as $post)
+    
    <div class="post"</div>
        <h3> {{$post->title}} </h3>
        <p> {{substr($post->body,0,20)}}... </p>
@@ -37,7 +48,6 @@
    </div>
 
 <hr>
-
     <div class="post"</div>
        <h3> Post Title </h3>
        <p> Post Intro </p>
@@ -45,6 +55,7 @@
    </div>
     
         <div class="col-md-3-offset-1">
-            <h2>SIDEBAR</h2> <!-- this does not work atm -->
-        </div>
+            <h2>SIDEBAR</h2> </div <!-- this does not work atm -->
+        
+   
    @endsection

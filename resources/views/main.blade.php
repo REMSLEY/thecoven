@@ -26,10 +26,11 @@
 
         <!-- Styles -->
         <style>
+            @import url(https://fonts.googleapis.com/css?family=Inconsolata);
             html, body {
                 background-color: #fff;
                 color: #636b6f;
-                font-family: 'Raleway', sans-serif;
+                font-family: 'Inconsolata', Noto Sans;
                 font-weight: 100;
                 height: 100vh;
                 margin: 0;
@@ -99,7 +100,7 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="/">Home <span class="sr-only">(current)</span></a></li>
+        <li class="active"><a href="/">Home <!-- NEED TO CHANGE THIS FOR EACH PAGE -->
         
         <!-- first link is current page, second is for the home page, etc. -->
         
@@ -115,19 +116,30 @@
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">My Page <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="#">View Profile?</a></li>
-            <li><a href="#">View Posts?</a></li>
-            <li><a href="#">Edit?</a></li>
+            <li><a href="#">Go To Profile</a></li>
+            <li><a href="/posts/create">Create Post</a></li>
+            <li><a href="#">Settings</a></li>
             <li role="separator" class="divider"></li>
-            <li><a href="#">Log out?</a></li>
+            <li><a href="#">Log out</a></li>
           </ul>
         </li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
+    
     @include('partials._messages')
-    <div class="container">@yield('content')</div>
+    
+    <div class="container">
+        
+        @yield('content')
+        
+    <hr>
+    
+    <p class="text-center">Copyright TheCoven</p>
+        
+    </div>
+    
       <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
