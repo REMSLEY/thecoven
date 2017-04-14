@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 //use Illuminate\Foundation\Validation;
 use App\Post;
+use Session;
 
 class PostController extends Controller
 {
@@ -57,6 +58,8 @@ class PostController extends Controller
         
         $post->save();
         
+        Session::flash('success', 'Thank you for your contribution');
+                
         return redirect()->route('posts.show', $post->id);
         
         //redirect to a page, e.g. display the post
@@ -75,7 +78,8 @@ class PostController extends Controller
     }
 
     /**
-     * Show the form for editing the specified resource.
+     * Show the form for editing the specified resource.git pull
+     * 
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
