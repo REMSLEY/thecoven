@@ -29,7 +29,7 @@
        <a href='#' class='btn btn primary'> Read More </a>
    
    </div>
-
+@endforeach
 </div>
     
 <hr>
