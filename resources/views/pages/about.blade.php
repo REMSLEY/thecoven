@@ -5,6 +5,13 @@
 
     </head>
     
+    <style>
+    img {
+    display: block;
+    margin: 0 auto;
+        }
+   </style>
+    
     <title>About the Yellow Rose</title>
     
     <body>
@@ -15,17 +22,17 @@
                 </div>
 
                 <div class="links">
-                    <a href="#">The Gang</a>
-                    <a href="#">News</a>
-                    <a href="#">Ladies of Code</a>
-                    <a href="#">Get into Tech</a>
-                    <a href="#">Links</a>
+                    <a href="about/thegang">The Gang</a>
+                    <a href="about/news">News</a>
+                    <a href="links">Links</a>
+                    <a href="#">#</a>
+                    <a href="about/thankyou">Thank you</a>
                 </div>
                
             </div>
         </div>
         
-        <img src="{{URL::asset('/xampp/TheCovenDocs/TheCovenPics/IMG_2849.png')}}" alt="Picture of the gang" height="400" width="600"
+        <img src="/images/IMG_2849.jpg" alt="Picture of the gang" height="691" width="1037"/>
         
         <!-- <img src="/xampp/TheCovenDocs/TheCovenPics/IMG_2849.jpg" alt="Picture of the gang" style="width:5184px;height:3456px;"> -->
         

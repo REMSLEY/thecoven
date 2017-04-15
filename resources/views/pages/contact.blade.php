@@ -4,6 +4,13 @@
 
 <head>
     
+    <style>
+    img {
+    display: block;
+    margin: 0 auto;
+        }
+   </style>
+    
     <title>Contact Us</title>
     
 </head>
@@ -13,7 +20,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <h1> Contact the Yellow Rose </h1>
+                    <h1 style="text-align: center"> Contact the Yellow Rose </h1>
                     <hr>
                     <form>
                         <div class="form-group">
@@ -37,7 +44,7 @@
                 </div>
             </div>
         </div>        
-        
+    <img src="/images/IMG_2918.png" alt="Watercooler Moment" height="432" width="648"/>    
 </body>       
 </html>
 @endsection
