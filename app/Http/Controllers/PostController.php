@@ -27,7 +27,7 @@ class PostController extends Controller
     // to display posts for a signed in user.
     public function index ()
     {
-        $posts = Post::all();
+        $posts = Post::orderBy('id','desc')->paginate(5);
         return view('posts.index')->withPosts($posts);
 
     }

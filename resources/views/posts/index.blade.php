@@ -24,7 +24,6 @@
                 </thead>
                 
                 <tbody>
-                   
                     @foreach($posts as $post)
                         <tr>
                             
@@ -35,6 +34,10 @@
                     @endforeach
                 </tbody>
             </table>
+            <div class="text-center">
+                {!!$posts->Links();!!}
+            </div> 
+         
         </div>
     </div>
     
