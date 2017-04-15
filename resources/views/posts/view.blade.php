@@ -4,7 +4,7 @@
     <div class="row">
         <div class="col-md-8">
             <h2>{{$post->title}}</h2>
-            <p>{{$post->body}}</p>
+            <p class="post">{{$post->body}}</p>
         </div>
 
         <div class="col-md-4">
@@ -31,9 +31,19 @@
                             <input name="_method" type="hidden" value="DELETE">
     <!--                    <a href="{{ redirect()->route('posts.destroy', $post->id) }}" class="btn btn-block btn-danger">Delete Post</a>-->
                         <input type="submit" value="Delete" class="btn btn-block btn-danger">
+                       
                        {{ csrf_field() }}
                         </form>
                     </div>
+                    </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-sm-12">
+                        <form action="{{route('posts.index')}}" method="get" method="hidden">
+                              <input type="submit" value="View All Posts" class="btn btn-default btn-block">
+                      
+                        </form>
+                            </div>
                 </div>
             </div>
         </div>
