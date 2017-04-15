@@ -57,3 +57,6 @@ Route::get('', 'PostController@getIndex');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+
+Route::get('/posts/public', 'PostController@index');
+Route::get('/posts/public', 'PostController@show');

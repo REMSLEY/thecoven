@@ -21,7 +21,7 @@
                 
                 <dl class="dl-horizontal">
                     <dt>URL slug:</dt>
-                    <dd><a href="{{ route('posts.publicsingle', $post->slug) }}">{{ route('posts.publicsingle', $post->slug) }}</a></dd>
+                    <dd><a href="{{ route('posts.publicsingle', $post->slug) }} " style="word-wrap: break-word">{{ route('posts.publicsingle', $post->slug) }}</a></dd>
                 </dl>
 
                 <hr>
