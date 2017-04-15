@@ -109,7 +109,7 @@
         <li><a href="/pages/about">About</a></li> 
         <li><a href="/pages/links">Links</a></li>
         <li><a href="#">Posts</a></li>
-        <li><a href="#">Login</a></li>
+        <li><a href="{{ route('login') }}">Login</a></li>
         <li><a href="/pages/contact">Contact</a></li>
           </ul>
         </li>

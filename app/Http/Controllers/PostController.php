@@ -51,13 +51,15 @@ class PostController extends Controller
     {
         //validate the data
         $this->validate($request, ['title'=> 'required|max:255',
-                                   'body' => 'required'
+                                   'slug' => 'required|alpha_dash|min:5|max:255|unique:posts,slug',
+                                   'body' => 'required'                    
             ]);
         
        //store the data
         $post = new Post;
         
         $post->title = $request->title; // Slightly different syntax in the update function below - why?
+        $post->slug = $request->slug;
         $post->body = $request->body;
         $post->user_id = 1;
         $post->end_date = null;
@@ -106,14 +108,20 @@ class PostController extends Controller
      */
     public function update(Request $request, $id)
     {
-           //validate the data
-        $this->validate($request, ['title'=> 'required|max:255',
-                                   'body' => 'required'
+        $post = Post::find($id);
+        if($request->input('slug') == $post->slug) {
+            $this->validate($request, ['title'=> 'required|max:255',
+                                   'body' => 'required'   
             ]);
+        } else {
+            $this->validate($request, ['slug' => 'required|alpha_dash|min:5|max:255|unique:posts,slug',
+                                   'title'=> 'required|max:255',
+                                   'body' => 'required' 
+            ]);
+        }
         
-
-        $post = Post::find($id);       
         $post->title = $request->input('title');
+        $post->slug = $request->input('slug');
         $post->body = $request->input('body');
         $post->user_id = 1;
         $post->end_date = null;
@@ -152,5 +160,10 @@ class PostController extends Controller
             $topPosts = Post::orderBy('created_at','desc')->limit(4)->get();
             return view('pages.welcome', ['topPosts'=>$topPosts]);
 }
+
+    public function getPublicSingle($slug){
+        $post = Post::where('slug', '=', $slug)->first();
+        return view('posts.publicsingle')->withPost($post);
+    }
 
 }

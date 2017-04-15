@@ -11,6 +11,10 @@
                     <label for="title">Title:</label>
                     <textarea type="text" class="form-control input-lg" id="title" name="title" rows="1" style="resize:none;">{{ $post->title }}</textarea>
                 </div>
+                
+                <label for='slug'>URL:</label>
+                <input class="form-control" type="text" name="slug" id="slug" minlength="5" maxlength="255">
+                <br>
                 <div class="form-group">
                     <label for="body">Content:</label>
                     <textarea type="text" class="form-control input-lg" id="body" name="body" rows="10">{{ $post->body }}</textarea>
