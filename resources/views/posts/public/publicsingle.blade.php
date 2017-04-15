@@ -3,6 +3,8 @@
 @section('content')
     <div class="row">
         <div class="col-md-8">
+            <img src="{{asset('images/', $post->image)}}"
+                 height="400" width="800"/>
             <h2>{{$post->title}}</h2>
             <p class="post">{{$post->body}}</p>
         </div>

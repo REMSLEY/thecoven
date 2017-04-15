@@ -8,6 +8,7 @@ use App\Http\Controllers\Controller;
 use App\Post;
 use Session;
 use Auth;
+use Image;
 
 class PostController extends Controller
 {
@@ -71,6 +72,16 @@ class PostController extends Controller
         $post->end_date = null;
         $post->update_id = null;
         
+        //save image to post
+        if($request->hasFile('featured_image')){
+            $image=$request->file('featured_image');
+            $filename=time().'.'.$image->getClientOriginalExtension();
+            $location=public_path('images/',$filename);
+            Image::make($image)->resize(800,400)->save($location);
+            
+            $post->image=$filename;
+        }
+        
         $post->save();
         
         Session::flash('success', 'Thank you for your contribution :)');
@@ -78,6 +89,10 @@ class PostController extends Controller
         return redirect()->route('posts.show', $post->id);
         
         //redirect to a page, e.g. display the post
+        
+      
+        
+        
     }
 
     /**
