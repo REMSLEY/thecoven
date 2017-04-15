@@ -38,3 +38,7 @@ Route::resource('tags', 'TagController');
 Route::resource('users', 'UserController');
 
 Route::get('', 'PostController@getIndex');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');
