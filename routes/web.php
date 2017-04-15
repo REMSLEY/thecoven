@@ -10,6 +10,8 @@
 | contains the "web" middleware group. Now create something great!
 |
  */
+Route::get('blog/{slug}', ['as' => 'posts.publicsingle', 'uses' => 'PostController@getPublicSingle'])->where('slug', '[\w\d\-\_])+');
+
 Route::get('pages/contact', function(){
     return view ('pages/contact');
 });

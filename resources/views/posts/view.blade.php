@@ -12,11 +12,16 @@
                 <dl class="dl-horizontal">
                     <dt>Created on:</dt>
                     <dd>{{ date('l jS F Y, g:ia', strtotime($post->created_at)) }}</dd>
-
                 </dl>
+                
                 <dl class="dl-horizontal">
                     <dt>Last updated:</dt>
                     <dd>{{ date('l jS F Y, g:ia', strtotime($post->updated_at)) }}</dd>
+                </dl>
+                
+                <dl class="dl-horizontal">
+                    <dt>URL slug:</dt>
+                    <dd><a href="{{ route('posts.publicsingle', $post->slug) }}">{{ route('posts.publicsingle', $post->slug) }}</a></dd>
                 </dl>
 
                 <hr>
