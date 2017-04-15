@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 //use Illuminate\Foundation\Validation;
 use App\Post;
 use Session;
+use Auth;
 
 class PostController extends Controller
 {
@@ -28,8 +29,13 @@ class PostController extends Controller
     public function index ()
     {
         $posts = Post::orderBy('id','desc')->paginate(5);
+        if (Auth::check()){
         return view('posts.index')->withPosts($posts);
 
+    }
+        else {
+        return view('posts\public.publicindex')->withPosts($posts);
+    }
     }
     /**
      * Show the form for creating a new resource.
@@ -83,7 +89,12 @@ class PostController extends Controller
     public function show($id)
     {   
         $post = Post::find($id);
+        if (Auth::check()){
         return view('posts.view', ['post'=>$post]);
+    }
+        else {
+            return view('posts\public.publicsingle', ['post'=>$post]);
+        }
     }
 
     /**
