@@ -12,7 +12,7 @@
     
     <h1> Links </h1>
         
-        <h2> Links to other useful organisations </h2>
+        <h2> Links to places we love and rate <3 </h2>
         
 </body>       
 </html>
