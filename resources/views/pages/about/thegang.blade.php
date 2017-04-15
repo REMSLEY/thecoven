@@ -40,7 +40,7 @@
   </div>
   <div class="media-body">
     <h3 class="media-heading">Bernice</h3>
-    ...
+    I like animals more than I like people.
   </div>
 </div>
  
