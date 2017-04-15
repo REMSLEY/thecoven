@@ -24,9 +24,9 @@ Route::get('pages/about', function () {
 
 //Route::get('','PostController@index');
 
-Route::get('', function () {
-    return view('pages/welcome');
-});
+//Route::get('', function () {
+//    return view('pages/welcome');
+//});
 
 //Route::get('/hello', 'PostController@displayPosts');
 
@@ -35,4 +35,4 @@ Route::resource('comments', 'CommentController');
 Route::resource('tags', 'TagController');
 Route::resource('users', 'UserController');
 
-
+Route::get('', 'PostController@getIndex');

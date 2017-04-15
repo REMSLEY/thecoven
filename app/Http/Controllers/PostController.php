@@ -147,4 +147,10 @@ class PostController extends Controller
 //$posts = Post::all();
 ////dd($posts);//laravel version of vardump
 //}
+    
+    public function getIndex(){
+            $topPosts = Post::orderBy('created_at','desc')->limit(4)->get();
+            return view('pages.welcome', ['topPosts'=>$topPosts]);
+}
+
 }

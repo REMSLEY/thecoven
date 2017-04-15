@@ -75,6 +75,10 @@
             .m-b-md {
                 margin-bottom: 30px;
             }
+            
+            .post{
+                word-wrap: break-word;
+            }
         </style>
         
   </head>
