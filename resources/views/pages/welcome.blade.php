@@ -18,7 +18,7 @@
     Want to show the featured post here.
     
 
-    <!-- SHOWS MULTIPLE POSTS AND A SIDEBAR THAT IS NOT WORKING 
+    <!-- SHOWS MULTIPLE POSTS AND A SIDEBAR THAT IS NOT WORKING -->
 <div class="row">
    <div class="col-md-8">
        <div class="post"</div>
@@ -31,15 +31,7 @@
     
 <hr>
 
-    @foreach($posts as $post)
-    
-   <div class="post"</div>
-       <h3> {{$post->title}} </h3>
-       <p> {{substr($post->body,0,20)}}... </p>
-       <a href='#' class='btn btn primary'> Read More </a>
-   </div>
-
-
+ 
 
 
     <div class="post"</div>
