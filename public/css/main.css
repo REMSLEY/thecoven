@@ -11,3 +11,12 @@ h1{
         margin: auto;
         width: 50%;
 }
+
+h6{
+    font-weight: bold;
+}
+
+.header {
+  font-weight: bold;
+    color: yellowgreen;
+}
