@@ -57,7 +57,7 @@ class PostController extends Controller
        //store the data
         $post = new Post;
         
-        $post->title = $request->title;
+        $post->title = $request->title; // Slightly different syntax in the update function below - why?
         $post->body = $request->body;
         $post->user_id = 1;
         $post->end_date = null;
@@ -65,7 +65,7 @@ class PostController extends Controller
         
         $post->save();
         
-        Session::flash('success', 'Thank you for your contribution');
+        Session::flash('success', 'Thank you for your contribution :)');
                 
         return redirect()->route('posts.show', $post->id);
         
@@ -93,7 +93,8 @@ class PostController extends Controller
      */
     public function edit($id)
     {
-        //
+        $post = Post::find($id);
+        return view('posts.edit')->withPost($post);
     }
 
     /**
@@ -110,16 +111,17 @@ class PostController extends Controller
                                    'body' => 'required'
             ]);
         
-       //store the data
-//        $post = new Post;
-//        
-//        $post->title = $request->title;
-//        $post->body = $request->body;
-//        $post->user_id = 1;
-//        $post->end_date = null;
-//        $post->update_id = null;
+
+        $post = Post::find($id);       
+        $post->title = $request->input('title');
+        $post->body = $request->input('body');
+        $post->user_id = 1;
+        $post->end_date = null;
+        $post->update_id = null; // Same as user_id?
         
         $post->save();
+        
+        Session::flash('success', 'Success! Your changes have been saved.');
         
         return redirect()->route('posts.show', $post->id);
         
@@ -134,7 +136,12 @@ class PostController extends Controller
      */
     public function destroy($id)
     {
-        //
+       $post = Post::find($id);
+       $post->delete();
+       
+       Session::flash('success', 'Your post has been deleted');
+       
+       return redirect()->route('posts.index');
     }
 //public function displayPosts (){
 //$posts = Post::all();
