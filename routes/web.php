@@ -11,6 +11,7 @@
 |
  */
 
+
 Route::get('pages/about/thegang', function(){
     return view ('pages/about/thegang');
 });
@@ -22,6 +23,9 @@ Route::get('pages/about/thankyou', function(){
 Route::get('pages/about/news', function(){
     return view ('pages/about/news');
 });
+
+Route::get('blog/{slug}', ['as' => 'posts.publicsingle', 'uses' => 'PostController@getPublicSingle'])->where('slug', '([\w\d\-\_])+');
+
 
 Route::get('pages/contact', function(){
     return view ('pages/contact');
@@ -49,3 +53,7 @@ Route::resource('tags', 'TagController');
 Route::resource('users', 'UserController');
 
 Route::get('', 'PostController@getIndex');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');

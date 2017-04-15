@@ -11,7 +11,7 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 //use Illuminate\Support\Facades\Validator;
 //use App\Post;
 
- abstract class Controller extends BaseController
+ class Controller extends BaseController
 {
     use ValidatesRequests;
     /**
@@ -19,7 +19,7 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
      *
      * @return \Illuminate\Http\Response
      */
-    abstract public function index();
+    //public function index();
     
 
     /**
@@ -27,7 +27,7 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
      *
      * @return \Illuminate\Http\Response
      */
-    abstract public function create();
+    //public function create();
     
 
     /**
@@ -36,7 +36,7 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    abstract public function store(Request $request);
+    //public function store(Request $request);
     
 
     /**
@@ -45,7 +45,7 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    abstract public function show($id);
+//    public function show($id);
     
     /**
      * Show the form for editing the specified resource.
@@ -53,7 +53,7 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    abstract public function edit($id);
+   // public function edit($id);
    
 
     /**
@@ -63,7 +63,7 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    abstract public function update(Request $request, $id);
+    //public function update(Request $request, $id);
    
 
     /**
@@ -72,7 +72,7 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    abstract public function destroy($id);
+    //public function destroy($id);
   
     
  
