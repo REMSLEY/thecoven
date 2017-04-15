@@ -37,6 +37,6 @@
 
         <div class="col-md-3-offset-1">
             <h2>SIDEBAR</h2> </div> <!-- this does not work atm -->
-        
+</div>
 
    @endsection
