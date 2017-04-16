@@ -16,17 +16,17 @@
         
   <!-- THUMBNAILS -->
         
- <div font-family: 'Amatic SC'class="row">
+ <div class="row">
      
    <style>
-            @import url(https://fonts.googleapis.com/css?family=Amatic+SC:700);
+             @import url(https://fonts.googleapis.com/css?family=Amatic+SC:700);
              @import url(https://fonts.googleapis.com/css?family=Inconsolata);
             
-                div {
+                //div {
                  
-                font-family: 'Amatic SC', Amatic SC;
+                //font-family: 'Amatic SC', Amatic SC;
                
-                        }
+                //       }
     </style>      
     
      <!-- First Thumbnail - White rose campaign thumbnail -->
