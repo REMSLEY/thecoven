@@ -8,9 +8,8 @@
         <div class="col-md-8 col-md-offset-2">     
             <h1>Create New Post</h1>
             
-            <form action="/"method="post"enctype="multipart/form-data">
 
-            <form action="/posts" method="post">
+            <form action="/posts" method="post" enctype="multipart/form-data">
                 <label for='title'>Title:</label>
                 <input class="form-control" type="text" name="title" id="title" maxlength="255">
                 <br>
@@ -26,8 +25,7 @@
             {{Form::label('featured_image','Upload Featured Image:')}}
             {{Form::file('featured_image')}}
             </form>   
-                
-            </form>
+
         </div>
     </div>
    

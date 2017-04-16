@@ -13,9 +13,9 @@ class AddImageColToPosts extends Migration
      */
     public function up()
     {
-        Schema::table('posts', function (Blueprint $table) {
+        Schema::table('posts', function ($table) {
             //add image
-            $table=string('image')->nullable()->after('slug');
+            $table->string('image')->nullable()->after('slug');
         });
     }
 
@@ -26,7 +26,7 @@ class AddImageColToPosts extends Migration
      */
     public function down()
     {
-        Schema::table('posts', function (Blueprint $table) {
+        Schema::table('posts', function ($table) {
             //
             $table->dropColumn('image');
         });

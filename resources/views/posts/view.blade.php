@@ -4,6 +4,10 @@
     <div class="row">
         <div class="col-md-8">
             <h2>{{$post->title}}</h2>
+            
+            <img src="{{asset('/images/'. $post->image)}}"
+                 height="400" width="700"/>
+            
             <p class="post">{{$post->body}}</p>
         </div>
 
