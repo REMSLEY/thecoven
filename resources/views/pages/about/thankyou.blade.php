@@ -20,6 +20,7 @@
     <body>
         
 <h1 style="text-align: center"> Thank You! </h1>
+
 <img src="/images/lydia.jpg" alt="Picture of Lydia"/>
 
     </body>
