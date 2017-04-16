@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\User;
+use Auth;
+use Session;
 
 class UserController extends Controller
 {
@@ -14,10 +16,11 @@ class UserController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
+            //where returning a specific user by ID - only an admin should be able to see all users
     {
-        //where returning a specific user by ID - only an admin should be able to see all users
-      
+        return view('users.index');
     }
+    
 
     /**
      * Show the form for creating a new resource.

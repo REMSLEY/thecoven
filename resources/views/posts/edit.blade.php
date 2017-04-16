@@ -4,7 +4,7 @@
 
 @section('content')
     <form method="POST" action="{{ route('posts.update', $post->id) }}">
-        <div> class="row">
+        <div class="row">
             <div class="col-md-8">
 
                 <div class="form-group">
