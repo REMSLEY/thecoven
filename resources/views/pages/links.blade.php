@@ -8,13 +8,23 @@
     
 </head>
       
-<body>
+<body>   
     
     <h1 align="center"> Links </h1>
         
         <h2 align="center"> Links to places we love and rate <3 </h2>
         
   <!-- THUMBNAILS -->
+  
+   <style>
+            @import url(https://fonts.googleapis.com/css?family=RobotoMono);
+            
+                div {
+                 
+                font-family: 'Inconsolata', Roboto Mono;
+               
+                        }
+    </style>     
         
  <div class="row">
      
@@ -26,7 +36,7 @@
       <div class="caption">
         <h3>White Ribbon</h3>
         <p>blah blah</p>
-        <p><a href="http://www.whiteribboncampaign.co.uk/" class="btn btn-default" style="background-color: yellow;" role="button">Go to Website</a></p>
+        <p><a href="http://www.whiteribboncampaign.co.uk/" class="btn btn-default" style="background-color: yellow;" role="button"><span style="font-weight:bold">Go to Website</span></a></p>
       </div>
     </div>
   </div>  
@@ -39,7 +49,7 @@
       <div class="caption">
         <h3>Ladies of Code</h3>
         <p>blah blah</p>
-        <p><a href="https://www.meetup.com/Ladies-of-Code-Leeds/" class="btn btn-primary" style="background-color:#ff0099;" role="button">Go to Meetup Page</a></p>
+        <p><a href="https://www.meetup.com/Ladies-of-Code-Leeds/" class="btn btn-default" style="background-color:#ff0099;" role="button"><span style="font-weight:bold">Go to Meetup Page</span></a></p>
       </div>
      </div>  
   </div>
@@ -52,7 +62,7 @@
       <div class="caption">
         <h3>Sky - Get into Tech</h3>
         <p>blah blah</p>
-        <p><a href="http://getintotech.sky.com/" class="btn btn-primary" style="background-color:orange;" role="button">Go to Website</a> <a href="#" class="btn btn-default" style="background-color:greenyellow;" role="button">Read More</a></p>
+        <p><a href="http://getintotech.sky.com/" class="btn btn-default" style="background-color:orange;" role="button"><span style="font-weight:bold">Go to Website</span></a> <a href="#" class="btn btn-default" style="background-color:greenyellow;" role="button"><span style="font-weight:bold">Read More</span></a></p>
       </div>
      </div>  
   </div>   
@@ -71,7 +81,7 @@
       <div class="caption">
         <h3>Women's Aid Leeds</h3>
         <p>blah blah</p>
-        <p><a href="http://www.leedswomensaid.co.uk/" class="btn btn-primary" style="background-color:purple;" role="button">Go to Website</a></p>
+        <p><a href="http://www.leedswomensaid.co.uk/" class="btn btn-primary" style="background-color:purple;" role="button"><span style="font-weight:bold">Go to Website</span></a></p>
       </div>
     </div>
   </div>  
@@ -84,7 +94,7 @@
       <div class="caption">
         <h3>Leeds Feminist Network</h3>
         <p>blah blah</p>
-        <p><a href="https://www.facebook.com/pg/LSFN-Leeds-Feminist-Network-229437240469458/about/" class="btn btn-primary" style="background-color:blue;" role="button">Go to Facebook Page</a></p>
+        <p><a href="https://www.facebook.com/pg/LSFN-Leeds-Feminist-Network-229437240469458/about/" class="btn btn-primary" style="background-color:blue;" role="button"><span style="font-weight:bold">Go to Facebook Page</span></a></p>
       </div>
      </div>  
   </div>
@@ -97,7 +107,7 @@
       <div class="caption">
         <h3>Code First Girls</h3>
         <p>blah blah</p>
-        <p><a href="http://www.codefirstgirls.org.uk/cfg-northern-conference-2017.html" class="btn btn-primary" style="background-color:red;" role="button">Go to Website</a></p>
+        <p><a href="http://www.codefirstgirls.org.uk/" class="btn btn-primary" style="background-color:red;" role="button"><span style="font-weight:bold">Go to Website</span></a></p>
       </div>
      </div>  
   </div>   
