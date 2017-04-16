@@ -52,7 +52,7 @@
   </div>
   <div class="media-body">
     <h3 class="media-heading">Rachel</h3>
-    ...
+    Hello! I get giddy when I try a new function and it works (I'm looking at you JS alert box).
   </div>
 </div>
 

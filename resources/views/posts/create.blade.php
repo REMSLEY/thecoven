@@ -2,7 +2,21 @@
 
 @section('pageTitle', '| Create New Post')
 
+@section('stylesheets')
+
+<script src="https://cloud.tinymce.com/stable/tinymce.min.js"></script>
+
+<script>
+    
+    g
+    
+</script>
+
+@endsection
+
 @section('content')
+
+
 
     <div class="row">
         <div class="col-md-8 col-md-offset-2">     

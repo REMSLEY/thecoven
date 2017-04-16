@@ -1,6 +1,6 @@
 @extends('main')
 
-@section('title', '| Edit Post')
+@section('pageTitle', '| Edit Post')
 
 @section('content')
     <form method="POST" action="{{ route('posts.update', $post->id) }}">
