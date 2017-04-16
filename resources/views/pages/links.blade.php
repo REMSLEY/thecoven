@@ -15,19 +15,20 @@
         <h2 align="center"> Links to places we love and rate <3 </h2>
         
   <!-- THUMBNAILS -->
-  
+        
+ <div font-family: 'Amatic SC'class="row">
+     
    <style>
-            @import url(https://fonts.googleapis.com/css?family=RobotoMono);
+            @import url(https://fonts.googleapis.com/css?family=Amatic+SC:700);
+             @import url(https://fonts.googleapis.com/css?family=Inconsolata);
             
                 div {
                  
-                font-family: 'Inconsolata', Roboto Mono;
+                font-family: 'Amatic SC', Amatic SC;
                
                         }
-    </style>     
-        
- <div class="row">
-     
+    </style>      
+    
      <!-- First Thumbnail - White rose campaign thumbnail -->
      
   <div class="col-sm-6 col-md-4">  
