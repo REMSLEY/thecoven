@@ -15,6 +15,11 @@
                 <label for='slug'>URL:</label>
                 <input class="form-control" type="text" name="slug" id="slug" minlength="5" maxlength="255">
                 <br>
+                
+                <label for="featured_image">Update Image:</label>
+                <input class="form-control" type="image" name="featured_image" id="featured_image">
+                <br>
+                
                 <div class="form-group">
                     <label for="body">Content:</label>
                     <textarea type="text" class="form-control input-lg" id="body" name="body" rows="10">{{ $post->body }}</textarea>
