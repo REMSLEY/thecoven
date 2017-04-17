@@ -48,9 +48,14 @@ Route::get('pages/about', function () {
 //Route::get('/hello', 'PostController@displayPosts');
 
 Route::resource('posts', 'PostController');
-Route::resource('comments', 'CommentController');
 Route::resource('tags', 'TagController');
 Route::resource('users', 'UserController');
+
+Route::post('comments/{post_id}', ['uses' => 'CommentController@store', 'as' => 'comments.store']);
+Route::get('comments/{id}/edit', ['uses' => 'CommentController@edit', 'as' => 'comments.edit']);
+Route::put('comments/{id}', ['uses' => 'CommentController@update', 'as' => 'comments.update']);
+Route::delete('comments/{id}', ['uses' => 'CommentController@destroy', 'as' => 'comments.destroy']);
+Route::get('comments/{id}/delete', ['uses' => 'CommentController@delete', 'as' => 'comments.delete']);
 
 Route::get('', 'PostController@getIndex');
 
