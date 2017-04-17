@@ -9,6 +9,8 @@ use App\Post;
 use Session;
 use Auth;
 use Image;
+use Storage;
+use App\Tag;
 
 class PostController extends Controller
 {
@@ -45,7 +47,8 @@ class PostController extends Controller
      */
     public function create()
     {
-        return view('posts.create');
+        $tags = Tag::all();
+        return view('posts.create')->withTags($tags);
     }
 
     /**
@@ -59,7 +62,8 @@ class PostController extends Controller
         //validate the data
         $this->validate($request, ['title'=> 'required|max:255',
                                    'slug' => 'required|alpha_dash|min:5|max:255|unique:posts,slug',
-                                   'body' => 'required'                    
+                                   'body' => 'required',
+                                   'featured_image' => 'sometimes|image'
             ]);
         
        //store the data
@@ -135,16 +139,12 @@ class PostController extends Controller
     public function update(Request $request, $id)
     {
         $post = Post::find($id);
-        if($request->input('slug') == $post->slug) {
-            $this->validate($request, ['title'=> 'required|max:255',
-                                   'body' => 'required'   
-            ]);
-        } else {
-            $this->validate($request, ['slug' => 'required|alpha_dash|min:5|max:255|unique:posts,slug',
-                                   'title'=> 'required|max:255',
-                                   'body' => 'required' 
-            ]);
-        }
+
+        $this->validate($request, ['slug' => "required|alpha_dash|min:5|max:255|unique:posts,slug,$id",
+                               'title'=> 'required|max:255',
+                               'body' => 'required',
+                               'featured_image' => 'sometimes|image'
+        ]);
         
         $post->title = $request->input('title');
         $post->slug = $request->input('slug');
@@ -152,6 +152,16 @@ class PostController extends Controller
         $post->user_id = 1;
         $post->end_date = null;
         $post->update_id = null; // Same as user_id?
+        
+        if ($request->hasFile('featured_image')) {
+            $image=$request->file('featured_image');
+            $filename=time().'.'.$image->getClientOriginalExtension();
+            $location=public_path('images\\'.$filename);
+            Image::make($image)->resize(700,400)->save($location);
+            $oldFilename = $post->image;
+            $post->image=$filename;
+            Storage::delete($oldFilename);
+        }
         
         $post->save();
         
@@ -171,6 +181,7 @@ class PostController extends Controller
     public function destroy($id)
     {
        $post = Post::find($id);
+       Storage::delete($post->image);
        $post->delete();
        
        Session::flash('success', 'Your post has been deleted');
@@ -189,7 +200,7 @@ class PostController extends Controller
 
     public function getPublicSingle($slug){
         $post = Post::where('slug', '=', $slug)->first();
-        return view('posts.publicsingle')->withPost($post);
+        return view('posts\public.publicsingle')->withPost($post);
     }
 
 }

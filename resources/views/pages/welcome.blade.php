@@ -36,8 +36,8 @@
 
 
         <div class="col-md-3-offset-1">
-            <h2>SIDEBAR</h2>  <!-- this does not work atm -->
-            <a class="twitter-timeline" data-width="220" data-height="500" href="https://twitter.com/EverydaySexism">Tweets by EverydaySexism</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<!--            <h2>SIDE BAR</h2>  -->
+            <a class="twitter-timeline" data-width="370" data-height="500" href="https://twitter.com/EverydaySexism"></a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 </div>
 </div>
 

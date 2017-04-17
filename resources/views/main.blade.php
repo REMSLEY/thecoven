@@ -21,10 +21,12 @@
     
     <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
-
+        <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet" type="text/css">
+<!--         @import url(https://fonts.googleapis.com/css?family=Inconsolata);-->
         <!-- Styles -->
         <style>
-            @import url(https://fonts.googleapis.com/css?family=Inconsolata);
+
+            
             html, body {
                 background-color: #fff;
                 color: #636b6f;
@@ -124,6 +126,7 @@
           <ul class="dropdown-menu">
             <li><a href="{{ route('users.index') }}">Go To Profile</a></li>
             <li><a href="/posts/create">Create Post</a></li>
+            <li><a href= "{{route('tags.index')}}">Tags</a></li>
             <li><a href="#">Settings</a></li>
             <li role="separator" class="divider"></li>
             <li><a href="{{ route('logout') }}"onclick="event.preventDefault();

@@ -3,6 +3,8 @@
 @section('pageTitle', '| Edit Post')
 
 @section('content')
+
+{!! Html::style('css/select2.min.css') !!}
     <form method="POST" action="{{ route('posts.update', $post->id) }}">
         <div class="row">
             <div class="col-md-8">
@@ -15,6 +17,11 @@
                 <label for='slug'>URL:</label>
                 <input class="form-control" type="text" name="slug" id="slug" minlength="5" maxlength="255">
                 <br>
+                
+                <label for="featured_image">Update Image:</label>
+                <input class="form-control" type="image" name="featured_image" id="featured_image">
+                <br>
+                
                 <div class="form-group">
                     <label for="body">Content:</label>
                     <textarea type="text" class="form-control input-lg" id="body" name="body" rows="10">{{ $post->body }}</textarea>
@@ -46,14 +53,15 @@
 
                     <div class="row">
                         <div class="col-sm-12">
-                            <button type="submit" class="btn btn-success btn-block">Save Changes</button>
+                            <br><button type="submit" class="btn btn-success btn-block">Save Changes</button>
                             <input type="hidden" name="_token" value="{{ Session::token() }}">
-                            {{ method_field('PUT') //If this causes an error, try changing the method attribute in the original form tag to PUT }} 
+                            {{ method_field('PUT')}} 
+<!--                            If this causes an error, try changing the method attribute in the original form tag to PUT -->
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </form>
-
+{!! Html::script('js/select2.min.js') !!}
 @endsection

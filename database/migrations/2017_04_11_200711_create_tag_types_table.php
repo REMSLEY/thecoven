@@ -15,9 +15,9 @@ class CreateTagTypesTable extends Migration
     {
         Schema::create('tag_types', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('tag',30);
-            $table->dateTime('end_date');
-            $table->integer('update_id')->length(6);
+            $table->string('name',30);
+            $table->dateTime('end_date')->nullable();
+            $table->integer('update_id')->length(6)->nullable();
             $table->timestamps();
         });
     }

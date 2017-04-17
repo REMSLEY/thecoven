@@ -60,3 +60,7 @@ Route::get('/home', 'HomeController@index');
 
 Route::get('/posts/public', 'PostController@index');
 Route::get('/posts/public', 'PostController@show');
+
+//Route::get('users/index', function(){
+//    return view('users/index');
+//});
