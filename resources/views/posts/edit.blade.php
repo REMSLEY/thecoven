@@ -47,7 +47,7 @@
                             <a href="{{ route('posts.show', $post->id) }}" class="btn btn-primary btn-block">Cancel</a>
                         </div>
                         <div class="col-sm-6">
-                            <a href="{{ redirect()->route('posts.destroy', $post->id) }}" class="btn btn-block btn-danger">Delete Post</a>
+                            <a href="{{ route('posts.destroy', $post->id) }}" class="btn btn-block btn-danger">Delete Post</a>
                         </div>
                     </div>
 

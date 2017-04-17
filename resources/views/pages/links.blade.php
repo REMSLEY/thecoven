@@ -22,16 +22,16 @@
              @import url(https://fonts.googleapis.com/css?family=Amatic+SC:700);
              @import url(https://fonts.googleapis.com/css?family=Inconsolata);
             
-                //div {
+                .fontnice {
                  
-                //font-family: 'Amatic SC', Amatic SC;
+                font-family: 'Amatic SC', Amatic SC;
                
-                //       }
+                       }
     </style>      
     
      <!-- First Thumbnail - White rose campaign thumbnail -->
      
-  <div class="col-sm-6 col-md-4">  
+  <div class="col-sm-6 col-md-4 fontnice">  
     <div class="thumbnail">  
       <img src="/images/whiteribbonoriginal.png" alt="White Ribbon Campaign">
       <div class="caption">
