@@ -74,7 +74,7 @@
                 
             {{Form::label('featured_image','Upload Featured Image:')}}
             {{Form::file('featured_image')}}
-            </form>   
+<!--            </form>   -->
 
         </div>
     </div>

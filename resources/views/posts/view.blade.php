@@ -38,7 +38,7 @@
 <!--                        <form action="{{route('posts.edit', $post->id)}}" method="get">
                             <input type="submit" value="Edit Post" class="btn btn-block btn-primary">
                         </form>-->
-                        <a href="{{ redirect()->route('posts.edit', $post->id) }}" class="btn btn-block btn-primary">Edit Post</a> 
+                        <a href="{{ route('posts.edit', $post->id) }}" class="btn btn-block btn-primary">Edit Post</a> 
                     </div>
                     <div class="col-sm-6">
 
