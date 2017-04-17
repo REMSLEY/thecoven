@@ -189,7 +189,7 @@ class PostController extends Controller
 
     public function getPublicSingle($slug){
         $post = Post::where('slug', '=', $slug)->first();
-        return view('posts.publicsingle')->withPost($post);
+        return view('posts\public.publicsingle')->withPost($post);
     }
 
 }
