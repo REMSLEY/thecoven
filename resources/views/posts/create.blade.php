@@ -23,6 +23,9 @@
 
 @section('content')
 
+<!--<link href="public/css/select2.min.css" rel="stylesheet" />
+<script src="public/js/select2.min.js"></script>
+-->
 
 
     <div class="row">
@@ -37,6 +40,12 @@
               {{ Form::label('slug', 'URL:') }}  
               {{ Form::text('slug', null, array('class' => 'form-control', 'required' => '', 'minlength' => '5', 'maxlength' => '150')) }} 
               
+              {{ Form::label('tags', 'Tags:')}}
+<!--              <select class="form-control select2-multi" name="tags" multiple="multiple">
+                  @foreach ($tags as $tag)
+                  <option value="{{$tag->id}}">{{$tag->name}}</option>
+                  @endforeach
+              </select>-->
               {{ Form::label('body', "Content:") }} 
               {{ Form::textarea('body', null, array('class' => 'form-control', 'required' => '', 'maxlength' => '2500')) }}
               
@@ -69,11 +78,21 @@
 
         </div>
     </div>
+
    
 @endsection
 
 @section('scripts')
 
    {!! Html::script('js/parsley.min.js') !!}
+   {!! Html::script('js/select2.min.js') !!}
+   
+   
+   <script type="text/javascript">
+       $('.select2-multi').select2();
+       </script>
+       
+    
+}
 
 @endsection   

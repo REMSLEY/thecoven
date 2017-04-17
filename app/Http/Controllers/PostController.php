@@ -10,6 +10,7 @@ use Session;
 use Auth;
 use Image;
 use Storage;
+use App\Tag;
 
 class PostController extends Controller
 {
@@ -46,7 +47,8 @@ class PostController extends Controller
      */
     public function create()
     {
-        return view('posts.create');
+        $tags = Tag::all();
+        return view('posts.create')->withTags($tags);
     }
 
     /**

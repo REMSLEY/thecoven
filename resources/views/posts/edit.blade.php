@@ -3,6 +3,8 @@
 @section('pageTitle', '| Edit Post')
 
 @section('content')
+
+{!! Html::style('css/select2.min.css') !!}
     <form method="POST" action="{{ route('posts.update', $post->id) }}">
         <div class="row">
             <div class="col-md-8">
@@ -61,5 +63,5 @@
             </div>
         </div>
     </form>
-
+{!! Html::script('js/select2.min.js') !!}
 @endsection
