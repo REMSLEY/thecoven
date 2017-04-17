@@ -28,4 +28,8 @@ protected $table = 'users';
     protected $hidden = [
         'password', 'remember_token',
     ];
+    
+    public function comment(){
+       return $this->hasMany('App\Comment');
+    } 
 }
