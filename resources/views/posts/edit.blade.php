@@ -46,9 +46,10 @@
 
                     <div class="row">
                         <div class="col-sm-12">
-                            <button type="submit" class="btn btn-success btn-block">Save Changes</button>
+                            <br><button type="submit" class="btn btn-success btn-block">Save Changes</button>
                             <input type="hidden" name="_token" value="{{ Session::token() }}">
-                            {{ method_field('PUT') //If this causes an error, try changing the method attribute in the original form tag to PUT }} 
+                            {{ method_field('PUT')}} 
+<!--                            If this causes an error, try changing the method attribute in the original form tag to PUT -->
                         </div>
                     </div>
                 </div>
