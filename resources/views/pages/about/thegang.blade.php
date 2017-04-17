@@ -40,7 +40,7 @@
   </div>
   <div class="media-body">
     <h3 class="media-heading">Bernice</h3>
-    I like animals more than I like people.
+    I like animals more than I like people. Sometimes I prefer the company of gin and jazz to that of anything that breathes.
   </div>
 </div>
  
