@@ -1,4 +1,4 @@
-@if(Session::has('success'))
+@if ( Session::has('success') )
 <div class="alert alert-success" role="alert">
 <strong>Success:</strong> {{Session::get('success')}}
 </div>
@@ -10,7 +10,7 @@
   <ul>
     @foreach ($errors->all() as $error)
     <li>{{$error}}</li><br>
-  </ul>
     @endforeach
+     </ul>
 </div>
 @endif
