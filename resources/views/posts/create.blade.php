@@ -35,7 +35,7 @@
               {{ Form::text('title', null, array('class' => 'form-control', 'required' => '', 'maxlength' => '100')) }}
               
               {{ Form::label('slug', 'URL:') }}  
-              {{ Form::text('slug', null, array('class' => 'form-control', 'required' => '', 'minlength' => '5', 'maxlength' => '150')) }} 
+              {{ Form::text('slug', null, array('class' => 'form-control', 'required' => '', 'minlength' => '5', 'maxlength' => '255')) }} 
               
               {{ Form::label('body', "Content:") }} 
               {{ Form::textarea('body', null, array('class' => 'form-control', 'required' => '', 'maxlength' => '2500')) }}

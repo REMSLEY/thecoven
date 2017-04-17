@@ -10,7 +10,7 @@
     </div>
     
     <div class="col-md-2">
-        <a href="{{ route('posts.create') }}" class="btn btn-default">Create New Post</a>
+        <a href="{{ route('posts.create') }}" class="btn btn-lg btn-block btn-primary">Create New Post</a>
     </div>
     
     <div class="col-lg-12">
