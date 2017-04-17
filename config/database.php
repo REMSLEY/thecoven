@@ -52,6 +52,7 @@ return [
             'prefix' => '',
             'strict' => true,
             'engine' => null,
+            //'host' => env('DB_HOST', 'localhost') . ('homestead' == gethostname() ? null : ':33060'),
         ],
 
         'pgsql' => [
