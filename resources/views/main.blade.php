@@ -105,14 +105,14 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="/">Home <!-- NEED TO CHANGE THIS FOR EACH PAGE -->
+        <li class="{{Request::is('/')?"active":""}}"><a href="/">Home</a></li> <!-- NEED TO CHANGE THIS FOR EACH PAGE -->
         
         <!-- first link is current page, second is for the home page, etc. -->
         
-        <li><a href="/pages/about">About</a></li> 
-        <li><a href="/pages/links">Links</a></li>
-        <li><a href="{{route ('posts.index') }}">Posts</a></li>
-        <li><a href="/pages/contact">Contact</a></li>
+        <li class="{{Request::is('pages/about')?"active":""}}"><a href="/pages/about">About</a></li> 
+        <li class="{{Request::is('pages/links')?"active":""}}"><a href="/pages/links">Links</a></li>
+        <li class="{{Request::is('posts')?"active":""}}"><a href="{{route ('posts.index') }}">Posts</a></li>
+        <li class="{{Request::is('pages/contact')?"active":""}}"><a href="/pages/contact">Contact</a></li>
           </ul>
         </li>
       </ul>
