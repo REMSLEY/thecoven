@@ -87,6 +87,7 @@
                     </div>
 
 			{{ Form::close() }}
+    </div>
 </div>
     
 <div class="row">
@@ -97,7 +98,10 @@
                 <div class="author-info">
                     <!--<img src="{{ "https://www.gravatar.com/avatar/" . md5(strtolower(trim($comment->email))) . "?s=50&d=monsterid" }}" class="author-image">-->
                     <div class="author-name">
-                            <h4>{{ $comment->name }}</h4>
+                            <?php
+                            $currentuser = User::find($comment->user_id);
+                            ?>
+                            <h4>{{ $currentuser->name }}</h4>
                             <p class="author-time">{{ date('F nS, Y - g:iA' ,strtotime($comment->created_at)) }}</p>
                     </div>
                 </div>
