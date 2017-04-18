@@ -48,8 +48,26 @@
      </div>  
   </div>
      
-     <!-- Third thumbnail - Get into Tech -->
+     <!-- Third thumbnail - Richard -->
      
+   <div class="col-sm-6 col-md-4 fontnice">  
+    <div class="thumbnail">  
+      <img src="/images/Richard.jpg" alt="Picture of Richard"/>
+      <div class="caption">
+        <h3>Richard Garside</h3>
+        <p>Mentoring</p>
+        <p><a href="http://nogginbox.co.uk/" class="btn btn-default" style="background-color:grey;" role="button"><span style="font-weight:bold">Go to Website</span></a>
+      </div>
+    </div>
+  </div> 
+</div>    
+     
+     <!-- Second Row -->
+
+<div class="row">     
+    
+     <!-- Fourth Thumbnail - Get into Tech -->
+  
   <div class="col-sm-6 col-md-4">  
       <div class="thumbnail">
       <img src="/images/GIT.jpg" alt="Get into Tech">
@@ -60,22 +78,7 @@
       </div>
      </div>  
   </div>   
-     
-</div>
-
-<div class="row">     
-    
-     <!-- Fourth Thumbnail - Richard -->
-     
-  <div class="col-sm-6 col-md-4 fontnice">  
-    <div class="thumbnail">  
-      <img src="/images/lydia.jpg" alt="Picture of Lydia"/>
-      <div class="caption">
-        <h3>Lydia Hall</h3>
-        <p>Photography</p>
-      </div>
-    </div>
-  </div>  
+       
      
      <!-- Fifth thumbnail - Andrew -->
       
