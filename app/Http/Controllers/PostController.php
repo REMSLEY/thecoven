@@ -11,6 +11,7 @@ use Auth;
 use Image;
 use Storage;
 use App\Tag;
+use App\User;
 
 class PostController extends Controller
 {
@@ -77,7 +78,7 @@ class PostController extends Controller
         $post->update_id = null;
         
         //save image to post
-        if($request->hasFile('featured_image')){
+        if ($request->hasFile('featured_image')){
             $image=$request->file('featured_image');
             $filename=time().'.'.$image->getClientOriginalExtension();
             $location=public_path('images/'.$filename);

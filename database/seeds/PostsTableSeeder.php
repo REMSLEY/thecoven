@@ -19,9 +19,7 @@ class PostsTableSeeder extends Seeder
             'created_at'=> new DateTime(),
             'updated_at'=> new DateTime(),
             'end_date'=> new DateTime(),
-            'update_id'=>rand(1,10)
-            
-            
+            'update_id'=>rand(1,10),    
         ]);
     }
 }
