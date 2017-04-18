@@ -20,16 +20,23 @@ class CommentController extends Controller
     public function store(Request $request, $post_id)
     {
         $this->validate($request, array(
-            'name'      =>  'required|max:255',
             'comment'   =>  'required|min:5|max:2000'
             ));
+        
         $post = Post::find($post_id);
+        $userid = $request->user_id;
+        $user = User::find($userid);
         $comment = new Comment();
-        $comment->name = $request->name;
-        $comment->comment = $request->comment;
-        $comment->approved = true;
+        
+        $comment->comment_body = $request->comment;
+//        $comment->user_id = $userid;
+//        $comment->post_id = $post_id;
+//        $comment->approved = true;
+        
         $comment->post()->associate($post);
+        $comment->user()->associate($user);
         $comment->save();
+        
         Session::flash('success', 'Comment was added. Well done you!');
         return redirect()->route('posts.show');
     }

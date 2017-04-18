@@ -71,9 +71,11 @@
 
                     <div class="row">
                             <div class="col-md-12">
-                                <?php $username = Session::get('email')?>
-                                    {{ Form::label('name', "Name:") }}
-                                    {{ Form::text('name', "$username", ['class' => 'form-control']) }}
+                                <?php 
+                                $id = Auth::user()->id;
+                                $currentuser = User::find($id);
+                                ?>
+                                    {{ Form::hidden('user_id', "$currentuser->id") }}
                             </div>
 
                             <div class="col-md-12">
