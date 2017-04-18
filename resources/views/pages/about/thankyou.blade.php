@@ -62,6 +62,46 @@
   </div>   
      
 </div>
+
+<div class="row">     
+    
+     <!-- Fourth Thumbnail - Richard -->
+     
+  <div class="col-sm-6 col-md-4 fontnice">  
+    <div class="thumbnail">  
+      <img src="/images/lydia.jpg" alt="Picture of Lydia"/>
+      <div class="caption">
+        <h3>Lydia Hall</h3>
+        <p>Photography</p>
+      </div>
+    </div>
+  </div>  
+     
+     <!-- Fifth thumbnail - Andrew -->
+      
+  <div class="col-sm-6 col-md-4">  
+      <div class="thumbnail">
+      <img src="/images/skybanner.png" alt="Sky">
+      <div class="caption">
+        <h3>Andrew Schofield</h3>
+        <p>Sky Developer and Mentor</p>
+      </div>
+     </div>  
+  </div>
+     
+     <!-- Sixth - Ben -->
+     
+  <div class="col-sm-6 col-md-4">  
+      <div class="thumbnail">
+      <img src="/images/skybanner.png" alt="Sky">
+      <div class="caption">
+        <h3>Ben Lucas</h3>
+        <p>Sky Developer and Mentor</p>
+      </div>
+     </div>  
+  </div>   
+     
+</div>
   
  
     </body>

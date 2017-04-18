@@ -31,7 +31,7 @@
     
      <!-- First Thumbnail - White rose campaign thumbnail -->
      
-  <div class="col-sm-6 col-md-4 fontnice">  
+  <div class="col-sm-6 col-md-4">  
     <div class="thumbnail">  
       <img src="/images/whiteribbonoriginal.png" alt="White Ribbon Campaign">
       <div class="caption">
