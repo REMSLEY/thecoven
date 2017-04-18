@@ -2,20 +2,36 @@
 
 @section('pageTitle', '| Edit Post')
 
-@section('content')
-
+@section('stylesheets')
+{!! Html::style('css/parsley.css') !!}
 {!! Html::style('css/select2.min.css') !!}
-    <form method="POST" action="{{ route('posts.update', $post->id) }}">
+
+<script src="https://cloud.tinymce.com/stable/tinymce.min.js"></script>
+
+<script>
+    
+    tinymce.init({
+        
+        selector: 'textarea'
+        
+    });
+    
+</script>
+
+@endsection
+
+@section('content')
+<form method="POST" action="{{ route('posts.update', $post->id) }}" enctype="multipart/form-data">
         <div class="row">
             <div class="col-md-8">
 
                 <div class="form-group">
                     <label for="title">Title:</label>
-                    <textarea type="text" class="form-control input-lg" id="title" name="title" rows="1" style="resize:none;">{{ $post->title }}</textarea>
+                    <input type="text" class="form-control input-lg" id="title" name="title" rows="1" style="resize:none;" value='{{ $post->title }}'>
                 </div>
                 
                 <label for='slug'>URL:</label>
-                <input class="form-control" type="text" name="slug" id="slug" minlength="5" maxlength="255">
+                <input class="form-control" type="text" name="slug" id="slug" minlength="5" maxlength="255" value="{{$post->slug}}">
                 <br>
                 
                 <label for="featured_image">Update Image:</label>

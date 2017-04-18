@@ -8,14 +8,16 @@
             <h2>{{$post->title}}</h2>
             
             <img src="{{asset('/images/'. $post->image)}}"
-                 height="400" width="700"/>
+                 height="400" width="700" class="img-responsive"/>
             <div class='post'>
                 {!! $post->body !!}
             </div>
         </div>
         
         <div class="col-md-4">
-           
+            <br>
+            <br>
+            <br>
             <div class="well">
                 <dl class="dl-horizontal">
                     <dt>Created on:</dt>
