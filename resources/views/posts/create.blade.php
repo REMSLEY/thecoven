@@ -33,7 +33,7 @@
             <h1 align="center">Create New Post</h1>
             <hr>
 
-            {!! Form::open(array('route' => 'posts.store', 'data-parsley-validate' => '')) !!}
+            {!! Form::open(array('route' => 'posts.store', 'data-parsley-validate' => '', 'enctype' => "multipart/form-data")) !!}
               {{ Form::label('title', 'Title:') }}
               {{ Form::text('title', null, array('class' => 'form-control', 'required' => '', 'maxlength' => '100')) }}
               
@@ -41,17 +41,20 @@
               {{ Form::text('slug', null, array('class' => 'form-control', 'required' => '', 'minlength' => '5', 'maxlength' => '255')) }} 
               
               {{ Form::label('tags', 'Tags:')}}
-<!--              <select class="form-control select2-multi" name="tags" multiple="multiple">
+              <select class="form-control select2-multi" name="tags" multiple="multiple">
                   @foreach ($tags as $tag)
                   <option value="{{$tag->id}}">{{$tag->name}}</option>
                   @endforeach
-              </select>-->
+              </select>
               {{ Form::label('body', "Content:") }} 
-              {{ Form::textarea('body', null, array('class' => 'form-control', 'required' => '', 'maxlength' => '2500')) }}
+              {{ Form::textarea('body', null, array('class' => 'form-control', 'maxlength' => '2500')) }}
               
               {{ Form::submit('Create Post', array('class' => 'btn btn-sucess btn-lg btn-block', 'style' => 'margin-top: 20px;')) }}
             
-            {!! Form::close() !!}}
+              {{Form::label('featured_image','Upload Featured Image:')}}
+              {{Form::file('featured_image')}}
+
+            {!! Form::close() !!}
             
        <!--   
        
@@ -72,8 +75,6 @@
                 {{ csrf_field() }} 
        -->
                 
-            {{Form::label('featured_image','Upload Featured Image:')}}
-            {{Form::file('featured_image')}}
 <!--            </form>   -->
 
         </div>

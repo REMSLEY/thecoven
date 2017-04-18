@@ -5,6 +5,8 @@ use App\Http\Requests;
 use App\Comment;
 use App\Post;
 use Session;
+use App\User;
+
 class CommentController extends Controller
 {
     public function __construct()
@@ -38,7 +40,7 @@ class CommentController extends Controller
         $comment->save();
         
         Session::flash('success', 'Comment was added. Well done you!');
-        return redirect()->route('posts.show');
+        return redirect()->route('posts.show',['id'=>$post_id]);
     }
     /**
      * Show the form for editing the specified resource.

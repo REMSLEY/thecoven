@@ -9,8 +9,9 @@
             
             <img src="{{asset('/images/'. $post->image)}}"
                  height="400" width="700"/>
-            
-            <p class="post">{{$post->body}}</p>
+            <div class='post'>
+                {!! $post->body !!}
+            </div>
         </div>
         
         <div class="col-md-4">
@@ -73,7 +74,7 @@
                             <div class="col-md-12">
                                 <?php 
                                 $id = Auth::user()->id;
-                                $currentuser = User::find($id);
+                                $currentuser = App\User::find($id);
                                 ?>
                                     {{ Form::hidden('user_id', "$currentuser->id") }}
                             </div>
@@ -99,7 +100,7 @@
                     <!--<img src="{{ "https://www.gravatar.com/avatar/" . md5(strtolower(trim($comment->email))) . "?s=50&d=monsterid" }}" class="author-image">-->
                     <div class="author-name">
                             <?php
-                            $currentuser = User::find($comment->user_id);
+                            $currentuser = App\User::find($comment->user_id);
                             ?>
                             <h4>{{ $currentuser->name }}</h4>
                             <p class="author-time">{{ date('F nS, Y - g:iA' ,strtotime($comment->created_at)) }}</p>
@@ -107,7 +108,7 @@
                 </div>
 
                 <div class="comment-content">
-                        {{ $comment->comment }}
+                        {{ $comment->comment_body }}
                 </div>
 
             </div>
