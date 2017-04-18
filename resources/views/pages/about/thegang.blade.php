@@ -28,7 +28,7 @@
   </div>
   <div class="media-body">
     <h3 class="media-heading">Sally</h3>
-    ...
+    I like cycling but not up-hill. I am deeply suspicious of loosely-typed coding languages.
   </div>
 </div>
 

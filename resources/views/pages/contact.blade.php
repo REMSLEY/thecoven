@@ -22,7 +22,8 @@
                 <div class="col-md-12">
                     <h1 style="text-align: center"> Contact the Yellow Rose </h1>
                     <hr>
-                    <form action method="post">
+                    <p style="text-align: center">Email us at <a href="mailto:contacttheyellowrose@gmail.com">contacttheyellowrose@gmail.com</a>!</p>
+<!--                    <form action="mailto:contacttheyellowrose@gmail.com" method="post">
                         <div class="form-group">
                             <label name="email">Email;</label>
                             <input id="email" name="email" class="form-control">
@@ -40,7 +41,7 @@
                         
                         <input type="submit" value="Send us a message!" class="btn btn-success">
                         {{ csrf_field() }}
-                    </form>
+                    </form>-->
                 </div>
             </div>
         </div>        
