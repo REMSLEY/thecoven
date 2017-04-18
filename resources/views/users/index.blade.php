@@ -5,6 +5,13 @@
 @section('content')
 @if(Auth::check())
 
+
+        <script> 
+            
+            alert ("This is your account information. Sorry it's not more interesting ;)");
+      
+        </script>
+
 <div class="row">
     <div class="col-md-12">
         <ul>
