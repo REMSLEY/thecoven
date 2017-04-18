@@ -12,9 +12,10 @@ class CommentsTableSeeder extends Seeder
     public function run()
     {
         DB::table('comments')->insert([
-            'post_id' => rand(1,10),
-            'user_id' => rand(1,10),
+            'post_id' => 1,
+            'user_id' => 1,
             'comment_body'=> str_random(100) //php artisan db:seed --Class=CommentsTableSeeder
-            
-    
-]);}}
+        ]);     
+    }
+   
+}

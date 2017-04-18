@@ -9,8 +9,9 @@
             
             <img src="{{asset('/images/'. $post->image)}}"
                  height="400" width="700"/>
-            
-            <p class="post">{{$post->body}}</p>
+            <div class='post'>
+                {!! $post->body !!}
+            </div>
         </div>
         
         <div class="col-md-4">
@@ -71,9 +72,11 @@
 
                     <div class="row">
                             <div class="col-md-12">
-                                <?php $username = Session::get('email')?>
-                                    {{ Form::label('name', "Name:") }}
-                                    {{ Form::text('name', "$username", ['class' => 'form-control']) }}
+                                <?php 
+                                $id = Auth::user()->id;
+                                $currentuser = App\User::find($id);
+                                ?>
+                                    {{ Form::hidden('user_id', "$currentuser->id") }}
                             </div>
 
                             <div class="col-md-12">
@@ -85,6 +88,7 @@
                     </div>
 
 			{{ Form::close() }}
+    </div>
 </div>
     
 <div class="row">
@@ -95,13 +99,16 @@
                 <div class="author-info">
                     <!--<img src="{{ "https://www.gravatar.com/avatar/" . md5(strtolower(trim($comment->email))) . "?s=50&d=monsterid" }}" class="author-image">-->
                     <div class="author-name">
-                            <h4>{{ $comment->name }}</h4>
+                            <?php
+                            $currentuser = App\User::find($comment->user_id);
+                            ?>
+                            <h4>{{ $currentuser->name }}</h4>
                             <p class="author-time">{{ date('F nS, Y - g:iA' ,strtotime($comment->created_at)) }}</p>
                     </div>
                 </div>
 
                 <div class="comment-content">
-                        {{ $comment->comment }}
+                        {{ $comment->comment_body }}
                 </div>
 
             </div>
