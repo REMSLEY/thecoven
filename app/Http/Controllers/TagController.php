@@ -86,6 +86,13 @@ class TagController extends Controller{
      */
     public function destroy($id)
     {
-        //
-    }   //
+       
+       $tags = Post::find($id);
+       Storage::delete($tags->name);
+       $tags->delete();
+       
+       Session::flash('success', 'Your tags has been deleted');
+       
+       return redirect()->route('tags.index');
+    }  
 }
