@@ -57,14 +57,11 @@ return [
 
         'pgsql' => [
             'driver' => 'pgsql',
-//            'host' => substr(parse_url(getenv("DATABASE_URL"))["host"], 1),
-            'host' => 'ec2-54-247-99-159.eu-west-1.compute.amazonaws.com',
+            'host' => parse_url(getenv("DATABASE_URL"))["host"],
             'port' => env('DB_PORT', '5432'),
             'database' => substr(parse_url(getenv("DATABASE_URL"))["path"], 1),
-//            'username' => getenv("DATABASE_URL")["user"],
-            'username' => 'hogkkospkvrxuz',
-//            'password' => getenv("DATABASE_URL")["pass"],
-            'password' => '13a021d612f83a3a194d1e33b2871b33358d552c0c22ad8eb473ce7b2cf192dd',
+            'username' => parse_url(getenv("DATABASE_URL"))["user"],
+            'password' => parse_url(getenv("DATABASE_URL"))["pass"],
             'charset' => 'utf8',
             'prefix' => '',
             'schema' => 'public',
