@@ -11,6 +11,7 @@
 
            <p class="lead">The Yellow Rose blog. A space for the bright, the burgeoning and the sometimes prickly.</p>
 
+
   <p><a class="btn btn-primary btn-lg" href="{{ route('posts.index') }}" role="button">View All Posts</a></p>
              </div> 
            </div>
