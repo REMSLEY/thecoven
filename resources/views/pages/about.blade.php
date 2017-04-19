@@ -25,14 +25,13 @@
                     <a href="about/thegang">The Gang</a>
                     <a href="about/news">News</a>
                     <a href="links">Links</a>
-                    <a href="#">#</a>
                     <a href="about/thankyou">Thank you</a>
                 </div>
                
             </div>
         </div>
         
-        <img src="/images/IMG_2849.jpg" alt="Picture of the gang" height="691" width="1037"/>
+        <img src="/images/IMG_2846_2.png" alt="Picture of the gang" height="691" width="1037"/>
         
         <!-- <img src="/xampp/TheCovenDocs/TheCovenPics/IMG_2849.jpg" alt="Picture of the gang" style="width:5184px;height:3456px;"> -->
         

@@ -99,7 +99,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">The Yellow Rose</a> <!-- text in top left hand box -->
+      <a class="navbar-brand">The Yellow Rose</a> <!-- text in top left hand box -->
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->

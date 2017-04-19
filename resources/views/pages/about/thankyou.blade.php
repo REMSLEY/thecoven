@@ -56,7 +56,7 @@
       <div class="caption">
         <h3>Richard Garside</h3>
         <p>Mentoring</p>
-        <p><a href="http://nogginbox.co.uk/" class="btn btn-default" style="background-color:grey;" role="button"><span style="font-weight:bold">Go to Website</span></a>
+        <p><a href="http://nogginbox.co.uk/" class="btn btn-default" style="background-color:grey;" role="button"><span style="font-weight:bold">Go to website</span></a>
       </div>
     </div>
   </div> 
