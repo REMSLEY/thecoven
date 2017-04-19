@@ -12,19 +12,19 @@
     
     <h1 align="center"> Links </h1>
         
-        <h2 align="center"> Links to places we love and rate <3 </h2>
+    <h3 align="center"><i> Links to useful and worthy organisations </i></h3>
         
   <!-- THUMBNAILS -->
         
  <div class="row">
      
    <style>
-             @import url(https://fonts.googleapis.com/css?family=Amatic+SC:700);
+             @import url(https://fonts.googleapis.com/css?family=Montserrat:500i);
              @import url(https://fonts.googleapis.com/css?family=Inconsolata);
             
                 .fontnice {
                  
-                font-family: 'Amatic SC', Amatic SC;
+                font-family: 'Montserrat:500i', Montserrat:500i;
                
                        }
     </style>      
@@ -32,11 +32,11 @@
      <!-- First Thumbnail - White rose campaign thumbnail -->
      
   <div class="col-sm-6 col-md-4">  
-    <div class="thumbnail">  
+    <div <div style="background-color:rgb(0,0,0);background-image:url(http://www.zingerbugimages.com/backgrounds/yellow_mini_flowers.gif);background-position:top left;background-repeat:repeat;background-attachment:fixed;}" class="thumbnail">  
       <img src="/images/whiteribbonoriginal.png" alt="White Ribbon Campaign">
       <div class="caption">
         <h3>White Ribbon</h3>
-        <p>Part of a global movement supporting men and boys to initiate a culture change and put a stop to violence against women.</p>
+        <p style=".fontnice">Part of a global movement supporting men and boys to initiate a culture change and put a stop to violence against women.</p>
         <p><a href="http://www.whiteribboncampaign.co.uk/" class="btn btn-default" style="background-color: yellow;" role="button"><span style="font-weight:bold">Go to Website</span></a></p>
       </div>
     </div>
@@ -45,7 +45,7 @@
      <!-- Second thumbnail - Ladies of Code -->
       
   <div class="col-sm-6 col-md-4">  
-      <div class="thumbnail">
+      <div <div style="background-color:rgb(0,0,0);background-image:url(http://www.zingerbugimages.com/backgrounds/yellow_mini_flowers.gif);background-position:top left;background-repeat:repeat;background-attachment:fixed;}" class="thumbnail">
       <img src="/images/ladiesofcode2.jpeg" alt="Ladies of Code">
       <div class="caption">
         <h3>Ladies of Code</h3>
@@ -58,7 +58,7 @@
      <!-- Third thumbnail - Get into Tech -->
      
   <div class="col-sm-6 col-md-4">  
-      <div class="thumbnail">
+      <div <div style="background-color:rgb(0,0,0);background-image:url(http://www.zingerbugimages.com/backgrounds/yellow_mini_flowers.gif);background-position:top left;background-repeat:repeat;background-attachment:fixed;}" class="thumbnail">
       <img src="/images/skylogo.jpg" alt="Sky">
       <div class="caption">
         <h3>Sky - Get into Tech</h3>
@@ -77,7 +77,7 @@
      <!-- First thumbnail - Women's aid -->
      
   <div class="col-sm-6 col-md-4">  
-    <div class="thumbnail">  
+    <div <div style="background-color:rgb(0,0,0);background-image:url(http://www.zingerbugimages.com/backgrounds/yellow_mini_flowers.gif);background-position:top left;background-repeat:repeat;background-attachment:fixed;}" class="thumbnail">  
       <img src="/images/womensaid.png" alt="Women's Aid">
       <div class="caption">
         <h3>Women's Aid Leeds</h3>
@@ -90,7 +90,7 @@
      <!-- Second thumbnail - Leeds Feminist Network -->
       
   <div class="col-sm-6 col-md-4">  
-      <div class="thumbnail">
+      <div <div style="background-color:rgb(0,0,0);background-image:url(http://www.zingerbugimages.com/backgrounds/yellow_mini_flowers.gif);background-position:top left;background-repeat:repeat;background-attachment:fixed;}" class="thumbnail">
       <img src="/images/leedsfeministnetwork.jpg" alt="Leeds Feminist Network">
       <div class="caption">
         <h3>Leeds Feminist Network</h3>
@@ -103,7 +103,7 @@
      <!-- Third thumbnail - Code First Girls -->
      
   <div class="col-sm-6 col-md-4">  
-      <div class="thumbnail">
+      <div <div style="background-color:rgb(0,0,0);background-image:url(http://www.zingerbugimages.com/backgrounds/yellow_mini_flowers.gif);background-position:top left;background-repeat:repeat;background-attachment:fixed;}" class="thumbnail">
       <img src="/images/codefirstgirls.png" alt="Code First Girls">
       <div class="caption">
         <h3>Code First Girls</h3>
