@@ -4,7 +4,7 @@
     <div class="row">
         <div class="col-md-8">
              <h2>{{$post->title}}</h2>
-            <img src="{{asset('images/', $post->image)}}"
+            <img src="{{asset('/images/'. $post->image)}}"
                  height="400" width="800" class="img-responsive"/>
             <p class="post">{!!$post->body!!}</p>
         </div>
