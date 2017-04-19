@@ -11,6 +11,7 @@
 
            <p class="lead">The Yellow Rose blog. A space for the bright, the burgeoning and the sometimes prickly.</p>
 
+
   <p><a class="btn btn-primary btn-lg" href="{{ route('posts.index') }}" role="button">View All Posts</a></p>
              </div> 
            </div>
@@ -29,7 +30,7 @@
   @foreach($topPosts as $post)
    <div class="post">
        <h3>{{$post->title}}</h3>
-       <p>{!! substr($post->body, 0, 300) !!}{{ strlen($post->body) > 300 ? '...' : '' }}</p>
+       <p>{{ substr(strip_tags($post->body), 0, 300) }}{{ strlen($post->body) > 300 ? '...' : '' }}</p>
        <a href='{{ url('blog/'.$post->slug) }}' class='btn btn primary'> Read More </a>
    
    </div>

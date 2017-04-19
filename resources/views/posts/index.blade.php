@@ -32,7 +32,7 @@
                     @foreach($posts as $post)
                         <tr>
                             
-                            <td class="post"><h5 class="header">{{ $post->title }}</h5><br>{!! substr($post->body, 0, 100) !!}{{ strlen($post->body) > 100 ? '...' : '' }}</td>
+                            <td class="post"><h5 class="header">{{ $post->title }}</h5><br>{!! substr(strip_tags($post->body), 0, 100) !!}{{ strlen($post->body) > 100 ? '...' : '' }}</td>
                             <td>{{ date('l jS F Y, g:ia', strtotime($post->created_at)) }}</td>
                             <td><a href='{{ route('posts.show', $post->id) }}' class='btn btn-default btn-sm'>View</a><a href='{{ route('posts.edit', $post->id) }}' class='btn btn-default btn-sm'>Edit</a></td>
                         </tr>
